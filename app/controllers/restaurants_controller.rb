@@ -8,10 +8,6 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
-  def new
-    @restaurant = Restaurant.new
-  end
-
   def create
     @restaurant = Restaurant.new(restaurant_params)
 
@@ -20,6 +16,10 @@ class RestaurantsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def new
+    @restaurant = Restaurant.new
   end
 
   def edit
@@ -40,7 +40,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to restaurants_path, status: :see_other
   end
 
   private

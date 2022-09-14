@@ -1,0 +1,22 @@
+<div class= "container">
+  <div>
+    <h1><%= @restaurant.name %></h1>
+    <ul class = 'list-group'>
+      <li class="list-group-item restaurant-name">Address: <%= @restaurant.address %></li>
+      <li class="list-group-item restaurant-name">Phone number: <%= @restaurant.phone_number %></li>
+      <li class="list-group-item restaurant-name">Category: <%= @restaurant.category %></li>
+    </ul>
+
+    <h1>Reviews</h1>
+    <ul class = 'list-group'>
+      <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.content %></li>
+      <% end %>
+    </ul>
+  </div>
+  <br>
+  <div class= "container d-flex justify-content-between">
+    <%= link_to 'Add review', new_restaurant_review_path(@restaurant), class:"btn btn-primary" %>
+    <%= link_to 'Restaurants', restaurants_path, class:"btn btn-primary" %>
+  </div>
+</div>

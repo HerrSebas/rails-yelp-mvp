@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-style: inherit;
+  color: rgb(8, 54, 138);
+}
+.link-to-text-color {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.restaurant-name {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold
+  font-style: inherit;
+}
+
+.button-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-style: inherit;
+  color: rgb(222, 225, 229);
+}

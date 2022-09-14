@@ -1,0 +1,22 @@
+<div class="container">
+  <div class= "list-container">
+  <h1>Best Restaurants!</h1>
+    <ul class = "list-group">
+      <% @restaurants.each do |restaurant| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center restaurant-name">
+          <%= restaurant.name %>
+          <span class="badge bg-primary rounded-pill">
+            <%= link_to "Go!", restaurant_path(restaurant), class:'link-to-text-color'%>
+          </span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="navbar">
+    <%= link_to "Add restaurant",  new_restaurant_path, class:"btn btn-primary button-text"%>
+  </div>
+</div>
+
+<ul class="list-group">
+
+</ul>
